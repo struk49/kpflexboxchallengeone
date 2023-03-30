@@ -1,25 +1,18 @@
 /* 
 ////// For this challenge ///////
 
-- You will have to modify the HTML
-
-- You can add new classes in the HTML
-  if you need to
+- All text is in the text.md file
 
 // Requirements
-1. The headings in the first row must be
-   a different color
-2. The two .col at the bottom must go next
-   to one another
-3. The section at the bottom should have
-   a dark background color and a different
-   color of text
-4. I've removed the "gap" that I created,
-   so you'll have to add it back in
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
 
-   */
+*/
 
-   *, *::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -29,66 +22,49 @@ body {
     font-size: 1.3rem;
 }
 
+header
+{
+    background: #136c72;
+    padding: .5em 0;
+}
+
+.nav__list
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+}
+
+.nav__link
+{
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link--btn
+{
+    background: #FFF;
+    color: #136c72;
+    padding: .25em 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
 h1 {
     font-size: 3rem;
+    margin-top: 0;
 }
 
-.container {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.row {
-    /* display: flex => flex container */
-    display: flex;
-    flex-direction: row;
-
-    /* can't use yet */
-     /*gap: 100px;*/ 
-}
-
-.col {
-    /* these are now flex items */
-    width: 100%;  
-    flex-direction: column;
-}
-
-.col + .col{
-    margin-left: 100px;
-}
-
-.hero {
-    padding: 100px 0;
-    background-color: #23424A;
-    color: #FFF;
-}
-
-.hero__text {
-    width: 60%;
-}
-
-.hero p {
-    margin-bottom: 3em;
-}
-
-.three-col
+.section-title
 {
-    text-align: center;
-    padding: 3em 0;
-}
-
-.three-col h2{
     color: #87629a;
 }
 
-.two-col
-{
-    text-align: center;
-    background-color: #136c72;
-    color: #FFF;
-    padding: 3em 0;
-}
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -103,4 +79,66 @@ h1 {
 .btn:hover,
 .btn:focus {
     opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main
+{
+    margin-top: 3em;
+}
+
+.primary-content
+{
+    width: 62%;
+}
+
+.sidebar
+{
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #FFF;
+    background-color: #136c72;
 }
